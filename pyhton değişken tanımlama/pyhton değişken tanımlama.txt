@@ -1,0 +1,12 @@
+musteriAd="murat"
+musteriSoyad="yıldız"
+musteriAdSoyad=musteriAd + ' ' + musteriSoyad
+musteriCinsiyeti=True #erkek
+musteriTcKimlik="8488432157896541"
+musteriDogumYili=2003
+musteriAdres="konya karatay"
+musteriYasi=2022 - musteriDogumYili
+
+print(musteriYasi)
+print(musteriAdSoyad)
+print(musteriTcKimlik)
