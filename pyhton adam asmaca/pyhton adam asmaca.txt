@@ -1,0 +1,49 @@
+adam asma oyunu
+
+import random
+
+
+
+def adamas():
+    soru=1
+    liste = ["mücadele", "türkiye", "vatan", "bayrak", "istiklal", "konya", "ayrılık", "pişmanlık", "pembe", "yağmur"]
+    while(soru==1):
+        print("---Adam asmacaya hoşgeldiniz---")
+        secim = int(input("oyuna başla(1), yeni kelime(2) tuşlayınız : "))
+        if(secim==1):
+            b=list(random.choice(liste))
+            c = [" _ "] * len(b)
+            hak=5
+            indeks=0
+            bulundu=False
+            while hak!=0:
+                harf=input("Oyun basladı lütfen bir harf giriniz: ").lower()
+                for harfbul in b:
+                    indeks+=1
+                    if harfbul==harf:
+                        bulundu=True
+                        c[indeks - 1]=harf
+                    if (" _ ") not in c:
+                        print("tebrikler bildiniz")
+                        soru = int(input("tekrar oynamak istermisiniz(1)evet (0)hayır :"))
+                        exit()
+
+                if bulundu==False:
+                    hak-=1
+                    print("yanlis tahmin ettin")
+                    print(hak, "hakkiniz kaldi")
+                if hak==0 and " _ " in c:
+                    print("tahmin hakkınız bitti")
+                    soru=int(input("tekrar oynamak istermisiniz(1)evet (0)hayır :"))
+                indeks=0
+                bulundu=False
+                print(c)
+        else:
+            kelime=str(input("lütfen eklemek istediğiniz kelimeyi girin:"))
+            liste.append(kelime)
+
+
+
+
+
+adamas()
