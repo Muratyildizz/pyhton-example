@@ -1,0 +1,33 @@
+17-20 ve 25-27 arasındaki asal sayıların ortalamasını bulma
+a = 0
+b = 0
+a_toplam = 1
+b_toplam = 1
+m=0
+n = int(input("kaç tane asal ayı girecen: "))
+
+while (m<n):
+    asalsayi = int(input("asal sayı gir: "))
+
+    if (asalsayi >17 and asalsayi<20):
+        a += 1
+        a_toplam += asalsayi
+        m+=1
+    elif(asalsayi > 25 and asalsayi < 27):
+        b += 1
+        b_toplam += asalsayi
+        m+=1
+    else:
+        print("hatalı giriş yaptınız")
+        continue
+a_toplam-=1
+b_toplam-=1
+if(a!=0):
+    print("17-20 asalsayi arası ortalama: ",a_toplam/a)
+if(b!=0):
+    print("25-27 asalsayi arası ortalama: ",b_toplam/b)
+
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+
